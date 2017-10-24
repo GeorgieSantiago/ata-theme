@@ -1,0 +1,24 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <referenceBlock name="rmi.store.address"/> 
+            <referenceContainer name="header-wrapper">
+                <referenceBlock name="logo" remove="true"/>
+            </referenceContainer>
+            <referenceContainer name="header.panel">
+                <referenceBlock name="top.links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links pull-left ata-menu-left</argument>
+                    </arguments>
+                </referenceBlock>
+            </referenceContainer>
+        </referenceContainer>
+        <referenceContainer name="header-menu-wrapper">
+            <referenceBlock name="minicart" remove="true"/>
+        </referenceContainer>
+        <referenceContainer name="header-wrapper" htmlClass="pull-right btn btn-default" htmlTag="div">
+
+        </referenceContainer>
+        <move element="rmi.store.address" destination="header.panel" />
+    </body>
+</page>
