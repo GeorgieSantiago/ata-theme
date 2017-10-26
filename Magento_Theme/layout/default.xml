@@ -1,19 +1,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
 xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body htmlClass="container">
-        <referenceContainer name="header.panel" remove="true">
-        </referenceContainer>
         <referenceContainer name="header-menu-wrapper" htmlClass="transparent-navbar">
-        </referenceContainer>
-        <referenceContainer name="main.content">
-            <block class="Magento\Framework\View\Element\Template" name="three-stack-layout" template="Magento_Theme::double-layout.phtml" />
         </referenceContainer>
         <referenceBlock name="logo" remove="true" />
         <referenceBlock name="header-wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="compare.trigger" remove="true" />
         <move element="rmi.street.address" destination="content" />
-        <move element="navagation.sections" destination="content" />
-        <reference name="navigation.sections" remove="true" />
     </body>
 </page>
