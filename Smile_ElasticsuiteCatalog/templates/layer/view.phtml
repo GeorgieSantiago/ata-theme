@@ -24,7 +24,7 @@
 <?php $filters = count($block->getFilters());?>
 <?php $activeFilters = $block->getActiveFilters(); ?>
 <?php /*$activeFilters = "[0, 1, 2]" ;*/?>
-<div class="block filter" id="layered-filter-block" data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false, "collateral": { "openedState": "filter-active", "element": "body" } }}'>
+<div class="block filter contemporary-menu" id="layered-filter-block" data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false, "collateral": { "openedState": "filter-active", "element": "body" } }}'>
 <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
 <div class="block-title filter-title" data-count="<?php /* @escapeNotVerified */ echo $filtered; ?>">
 <strong data-role="title"><?php /* @escapeNotVerified */ echo __('Shop By') ?></strong>

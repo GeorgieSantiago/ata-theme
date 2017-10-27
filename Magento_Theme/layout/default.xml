@@ -1,12 +1,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
 xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body htmlClass="container">
-        <referenceContainer name="header-menu-wrapper" htmlClass="transparent-navbar">
+        <referenceContainer name="header-menu-wrapper" >
         </referenceContainer>
         <referenceBlock name="logo" remove="true" />
         <referenceBlock name="header-wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="compare.trigger" remove="true" />
         <move element="rmi.street.address" destination="content" />
+        <move element="breadcrumbs" destination="div.sidebar.main" />
     </body>
 </page>
