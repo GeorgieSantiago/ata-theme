@@ -3,11 +3,12 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_config
     <body htmlClass="container">
         <referenceContainer name="header-menu-wrapper" >
         </referenceContainer>
+        <referenceContainer name="header-menu-wrapper" htmlClass="stickyribbon d-flex flex-row justify-content-md-start justify-content-end ata-nav-spacing" />
         <referenceBlock name="logo" remove="true" />
         <referenceBlock name="header-wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
         <referenceBlock name="compare.trigger" remove="true" />
         <move element="rmi.street.address" destination="content" />
-        <move element="breadcrumbs" destination="div.sidebar.main" />
+        <move before="-" element="breadcrumbs" destination="div.sidebar.main" />
     </body>
 </page>

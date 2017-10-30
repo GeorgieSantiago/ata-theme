@@ -19,7 +19,6 @@
  * @var $block \Smile\ElasticsuiteCatalog\Block\Navigation
  */
 ?>
-
 <?php if ($block->canShowBlock()) : ?>
 <?php $filters = count($block->getFilters());?>
 <?php $activeFilters = $block->getActiveFilters(); ?>
@@ -69,7 +68,6 @@ switch ($block->escapeHtml(__($filter->getName()))) {
     default:
         echo "";
 }
-
 ?>"><?php echo $block->escapeHtml(__($filter->getName())) ?></dt>
 <dd data-role="collapsible" class="filter-options-content active">
 <div data-role="content" class="filter-options-item"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
@@ -90,4 +88,3 @@ require([
 </div>
 </div>
 <?php endif; ?>
-
