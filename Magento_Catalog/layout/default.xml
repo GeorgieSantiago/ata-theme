@@ -4,6 +4,7 @@
     <referenceContainer name="header.panel" remove="true" />
     <move element="rmi.store.address" destination="header-menu-wrapper" />
     <move element="top.search" destination="header-menu-wrapper" />
+    <referenceBlock name="rmi.state" remove="true" />
     <!--<referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>-->
 </body>
 </page>
