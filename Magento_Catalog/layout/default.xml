@@ -1,6 +1,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
+    <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
     <referenceContainer name="header.panel" remove="true" />
+    <move element="rmi.store.address" destination="header-menu-wrapper" />
+    <move element="top.search" destination="header-menu-wrapper" />
+    <!--<referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>-->
 </body>
 </page>
 
