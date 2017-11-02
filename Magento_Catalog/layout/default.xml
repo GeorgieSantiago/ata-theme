@@ -1,11 +1,27 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
-    <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
+   <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
     <referenceContainer name="header.panel" remove="true" />
-    <move element="rmi.store.address" destination="header-menu-wrapper" />
-    <move element="top.search" destination="header-menu-wrapper" />
-    <referenceBlock name="rmi.state" remove="true" />
-    <!--<referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>-->
+    <container before="-" name="ata.header.right" htmlTag="div" htmlClass="col-md-5 ata-block-combined" />
+    <container name="ata.product.row" htmlTag="div" htmlClass="row">
+        <referenceContainer name="col1" />
+        <referenceContainer name="col2" />
+        <referenceContainer name="col3" />
+    </container>
+    <container  name="col1" htmlTag="div" htmlClass="col-md-4" />
+    <container  name="col2" htmlTag="div" htmlClass="col-md-4" />
+    <container  name="col3" htmlTag="div" htmlClass="col-md-4" />
+    <!--<referenceContainer name="product.info.main" remove="true" />-->
+    <move element="product.info.details" destination="col1" />
+    <move element="product.info.media.image" destination="col2" />
+    <move element="product.info.description" destination="col3" />
+    <move element="product.info.attributes" destination="col3" />
+    <move element="rmi.store.address" destination="ata.header.right" />
+    <move element="top.search" destination="ata.header.right" />
+    <move element="ata.header.right" destination="header-menu-wrapper" />
+    <!--<referenceBlock name="rmi.state" remove="true" />--> 
+    <move element="mini.cart" destination="ata.header.right"/>
+    <referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>
 </body>
 </page>
 

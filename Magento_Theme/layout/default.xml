@@ -4,6 +4,7 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_config
         <referenceContainer name="header-menu-wrapper" >
         </referenceContainer>
         <referenceContainer name="header-menu-wrapper" htmlClass="stickyribbon d-flex flex-row justify-content-md-start justify-content-end ata-nav-spacing" />
+        <referenceBlock name="titleBlock" remove="true" />
         <referenceBlock name="logo" remove="true" />
         <referenceBlock name="header-wrapper" remove="true" />
         <referenceBlock name="minicart" remove="true" />
