@@ -1,27 +1,32 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
-   <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
-    <referenceContainer name="header.panel" remove="true" />
-    <container before="-" name="ata.header.right" htmlTag="div" htmlClass="col-md-5 ata-block-combined" />
-    <container name="ata.product.row" htmlTag="div" htmlClass="row">
-        <referenceContainer name="col1" />
-        <referenceContainer name="col2" />
-        <referenceContainer name="col3" />
-    </container>
-    <container  name="col1" htmlTag="div" htmlClass="col-md-4" />
-    <container  name="col2" htmlTag="div" htmlClass="col-md-4" />
-    <container  name="col3" htmlTag="div" htmlClass="col-md-4" />
-    <!--<referenceContainer name="product.info.main" remove="true" />-->
-    <move element="product.info.details" destination="col1" />
-    <move element="product.info.media.image" destination="col2" />
-    <move element="product.info.description" destination="col3" />
-    <move element="product.info.attributes" destination="col3" />
-    <move element="rmi.store.address" destination="ata.header.right" />
-    <move element="top.search" destination="ata.header.right" />
-    <move element="ata.header.right" destination="header-menu-wrapper" />
-    <!--<referenceBlock name="rmi.state" remove="true" />--> 
-    <move element="mini.cart" destination="ata.header.right"/>
-    <referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>
+<referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
+<referenceContainer name="header.panel" remove="true" />
+<referenceBlock name="the.social" remove="true" />
+<referenceBlock name="details.tab.block1" remove="true" />
+<referenceBlock name="details.tab.block2" remove="true" />
+<container name="ata.header.right" htmlTag="div" htmlClass="col-md-5 ata-block-combined" />
+<container after="after.body.start" before="footer" name="ata.product.row" htmlTag="div" htmlClass="row">
+    <container  name="col1" htmlTag="div" htmlClass="col-md-4 col1" />
+    <container  name="col2" htmlTag="div" htmlClass="col-md-4 col2" />
+    <container  name="col3" htmlTag="div" htmlClass="col-md-4 col3" />
+</container>
+<container name="ata.product.extra" after="ata.product.row" htmlTag="div" htmlClass="row">
+  <container  name="row2.col1" htmlTag="div" htmlClass="col-md-4 col1" />
+  <container  name="row2.col2" htmlTag="div" htmlClass="col-md-4 col1" />
+  <container  name="row2.col3" htmlTag="div" htmlClass="col-md-4 col1" />
+</container>
+<move element="ata.product.row" destination="main.content" before="-" />
+<move element="product.info.main" destination="col1" />
+<move element="product.info.media.image" destination="col2" />
+<move element="details.tab.block" destination="col3" />
+<move element="product.info.title" destination="col3" before="-" />
+<move element="rmi.store.address" destination="ata.header.right" />
+<move element="top.search" destination="ata.header.right" />
+<move element="ata.header.right" destination="header-menu-wrapper" />
+<move element="mini.cart" destination="ata.header.right"/>
+<referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>
+<referenceContainer name="titleBlock" remove="true" />
 </body>
 </page>
 
