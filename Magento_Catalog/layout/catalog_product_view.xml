@@ -3,6 +3,7 @@
 <body>
 <referenceBlock name="product.info.details" remove="true" />
 <referenceBlock name="frontlight.details.tab" before="footer-container" />
-<move element="product.info.details" destination="ata.product.details" />
+<referenceBlock name="title" remove="true" />
+<move element="product.info.price" destination="product.info.form.content" />
 </body>
 </page>

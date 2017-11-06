@@ -1,0 +1,34 @@
+<?php
+$groupChildren = $block->getGroupChildNames('latab', 'getChildHtml');
+$layout = $block->getLayout();
+$tab = '<ul class="nav nav-tabs d-flex flex-column flex-md-row" role="tablist">';
+$content = '<div class="tab-content">';
+$counter = 0;
+$active = "";
+$active_class = "";
+function label_to_url($label) {
+    $label = str_replace("/","",$label);
+    $label = str_replace(" ","-",$label);
+    $label = str_replace("\\","",$label);
+    return $label;
+}
+
+foreach($groupChildren as $item) {
+    $alias = $layout->getElementAlias($item);
+    $label = $block->getChildData($alias, 'title');
+    if ($counter == 0) {
+        $active_class = 'class="nav-link active"'; $active="active";
+    } else {
+        $active = ""; $active_class = "";
+    }
+    $nav_item_class= 'class="nav-item"';
+    $tab .= '<li role="presentation" ' . $nav_item_class. '><a class="nav-link ' . $active .'"href="#'. label_to_url($label) . '"aria-controls="' . $label .'" role="tab" data-toggle="tab" >' . $label .'</a></li>';
+    $content .= '<div role="tabpanel" class="tab-pane ' . $active .'" id="' . label_to_url($label) . '">' . $layout->renderElement($item) .'</div>';
+    $counter++;
+}
+
+$tab .= "</ul>";
+$content .= "</div>";
+
+echo $tab;
+echo $content;
