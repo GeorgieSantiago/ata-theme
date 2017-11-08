@@ -1,0 +1,58 @@
+<?php
+$scopeConfig = $this->helper('RMI\BaseModule\Helper\Data');
+$config_item = '';
+?>
+<div class="col-md-2 col-sm-12 col-xs-12 rmi-order-4">
+    <h3>Need help?</h3>
+    <div class="line"></div>
+            <?php if ($config_item = $scopeConfig->getStoreConfig('general/store_information/phone')) {
+            ?>
+            <span class="the-phone-link">
+            <?php echo $config_item; ?>
+                </span>
+            <?php } ?>
+            <br>
+            
+            <span>or email us at </span>
+            <br>
+
+           <?php  if ($config_item = $scopeConfig->getStoreConfig('trans_email/ident_general/email')) {
+            ?>
+            <a href="mailto:<?php echo $config_item; ?>" ><?php echo $config_item; ?></a>
+           <?php  }
+           
+           ?>
+            <div class="social-icon">
+<?php
+                echo '<ul class="rmi-social-media d-flex flex-row">';
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/twitter')) {
+                    echo '<li><a class="fa fa-twitter" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/facebook')) {
+                    echo '<li><a class="fa fa-facebook" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/pinterest')) {
+                    echo '<li><a class="fa fa-pinterest" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/Instagram')) {
+                    echo '<li><a class="fa fa-instagram" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/youtube')) {
+                    echo '<li><a class="fa fa-youtube" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/linkedin')) {
+                    echo '<li><a class="fa fa-linkedin" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/Houzz')) {
+                    echo '<li><a class="fa fa-houzz" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/googleplus')) {
+                    echo '<li><a class="fa fa-google-plus" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                if ($config_item = $scopeConfig->getStoreConfig('SocialMedia/SocialMedia_group/yelp')) {
+                    echo '<li><a class="fa fa-yelp" target="_blank" href="' . $config_item . '"></a></li>';
+                }
+                echo '</ul>';
+                ?>
+            </div>
+    </div>

@@ -1,40 +1,34 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
-<referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
-<referenceContainer name="header.panel" remove="true" />
-<referenceBlock name="the.social" remove="true" />
-<referenceBlock name="details.tab.block1" remove="true" />
-<referenceBlock name="details.tab.block2" remove="true" />
-<referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>
-<referenceContainer name="titleBlock" remove="true" />
-<referenceBlock name="product.info.addto" remove="true" />
-<container name="ata.header.right" htmlTag="div" htmlClass="col-md-5 ata-block-combined" />
-<container after="after.body.start" before="footer" name="ata.product.row" htmlTag="div" htmlClass="row">
-    <container  name="col1" htmlTag="div" htmlClass="col-md-4 col1" />
-    <container  name="col2" htmlTag="div" htmlClass="col-md-4 col2" />
-    <container  name="col3" htmlTag="div" htmlClass="col-md-4 col3" />
-</container>
-<container name="ata.product.extra" after="ata.product.row" htmlTag="div" htmlClass="row">
-  <container  name="row2.col1" htmlTag="div" htmlClass="col-md-4 col1" />
-  <container  name="row2.col2" htmlTag="div" htmlClass="col-md-4 col1" />
-  <container  name="row2.col3" htmlTag="div" htmlClass="col-md-4 col1" />
-</container>
-<referenceBlock name="details.tab.block">
-    <arguments>
-        <argument name="title" xsi:type="string">Changed</argument>
-    </arguments>
-</referenceBlock>
-<move element="ata.product.row" destination="main.content" before="-" />
-<move element="product.info.main" destination="col1" />
-<move element="product.info.media.image" destination="col2" />
-<move element="page.main.title" destination="col3" before="-" />
-<move element="details.tab.block" destination="col3" />
-<move element="product.info.review" destination="col3" after="-" />
-<referenceBlock name="product.info.title" remove="true" />
-<move element="rmi.store.address" destination="ata.header.right" />
-<move element="top.search" destination="ata.header.right" />
-<move element="ata.header.right" destination="header-menu-wrapper" />
-<move element="mini.cart" destination="ata.header.right"/>
+    <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="ata-sidebar-main sidebar sidebar-main" after="main" />
+    <referenceContainer name="header.panel" remove="true" />
+    <referenceBlock name="the.social" remove="true" />
+    <referenceBlock name="details.tab.block1" remove="true" />
+    <referenceBlock name="details.tab.block2" remove="true" />
+    <referenceContainer name="top.search" htmlClass="ata-searchbar" ></referenceContainer>
+<!--    <referenceBlock name="product.info.addto" remove="true" />-->
+    <container name="ata.header.right" htmlTag="div" htmlClass="col-md-5 ata-block-combined" />
+    <container after="after.body.start" before="footer" name="ata.product.row" htmlTag="div" htmlClass="row">
+        <container  name="col1" htmlTag="div" htmlClass="col-md-4 col1" />
+        <container  name="col2" htmlTag="div" htmlClass="col-md-4 col2" />
+        <container  name="col3" htmlTag="div" htmlClass="col-md-4 col3" />
+    </container>
+    <container name="ata.product.extra" after="ata.product.row" htmlTag="div" htmlClass="row">
+        <container  name="row2.col1" htmlTag="div" htmlClass="col-md-4 col1" />
+        <container  name="row2.col2" htmlTag="div" htmlClass="col-md-4 col1" />
+        <container  name="row2.col3" htmlTag="div" htmlClass="col-md-4 col1" />
+    </container>
+    <move element="ata.product.row" destination="main.content" before="-" />
+    <move element="product.info.main" destination="col1" />
+    <move element="product.info.media.image" destination="col2" />
+<!--    <move element="page.main.title" destination="col3" before="-" />-->
+    <move element="product.info.addto" destination="col3" />
+    <move element="details.tab.block" destination="col3" />
+    <move element="product.info.review" destination="col3" after="-" />
+    <move element="rmi.store.address" destination="ata.header.right" />
+    <move element="top.search" destination="ata.header.right" />
+    <move element="ata.header.right" destination="header-menu-wrapper" />
+    <move element="mini.cart" destination="ata.header.right"/>
 </body>
 </page>
 

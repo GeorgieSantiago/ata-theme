@@ -7,9 +7,12 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_config
         <referenceBlock name="titleBlock" remove="true" />
         <referenceBlock name="logo" remove="true" />
         <referenceBlock name="header-wrapper" remove="true" />
-        <referenceBlock name="minicart" remove="true" />
+        <!--<referenceBlock name="minicart" remove="true" />-->
         <referenceBlock name="compare.trigger" remove="true" />
         <move element="rmi.street.address" destination="content" />
         <move before="-" element="breadcrumbs" destination="div.sidebar.main" />
+        <container name="ata.footer.wrapper" htmlTag="div" htmlClass="ata-footer-wrapper" />
+        <move element="footer" destination="ata.footer.wrapper" />-->
+        <move element="minicart" destination="ata.header.right" />
     </body>
 </page>

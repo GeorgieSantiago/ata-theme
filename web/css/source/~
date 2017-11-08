@@ -1,9 +1,6 @@
 body{
     color: black;
 }
-.page-main{
-    padding: 0 5px 0 5px;    
-}
 
 a {
     color: black;    
@@ -13,15 +10,6 @@ a {
     background-color: black;
     color: white;
     max-width: 100%;
-}
-
-.product-item-info{
-    border: none !important;    
-}
-
-.minicart-wrapper{
-        padding-right: 80px;
-        margin-top: -30px;
 }
 
 .static-contemporary{
@@ -111,7 +99,6 @@ a {
 
 .ata-sidebar-main{
     background: #ece7e9;    
-    padding: 0 5px 0 5px;
 }
 
 .ata-address-header{
@@ -132,10 +119,6 @@ a {
     padding:0 10px 0 10px !important;
     width: 33%;
     border: 1px solid lightgray;
-}
-
-.ata-customer-link{
-    
 }
 
 .ata-product-item-link{
@@ -232,51 +215,6 @@ a {
     width: 58%;    
 }
 
-.page-products .products-grid .product-item {
-    border: none !important;    
-}
-
-
-/*
-    This section controls the footer
-*/
-.ata-footer-wrapper{
-    
-}
-
-.ata-footer-wrapper a {
-    color: white !important;    
-    font-size: 12px;
-}
-
-.ata-footer-wrapper li{
-    margin-bottom: 5px;    
-}
-
-.ata-footer-wrapper .footer-customer-care {
-   max-width: 15%;
-   background-color: #4a555a;
-   color: white;
-   padding-top: 28px;
-}
-
-.ata-footer-wrapper .footer-account{
-    max-width: 15%;
-    background-color: #4a555a;
-    color: white;
-    padding-top: 28px;
-}
-
-.ata-map{
-    order: 4 !important;
-    max-width: 28%;
-}
-
-
-.ata-footer-wrapper .footer-visit-us{
-    max-width: 15%;
-    background-color: #4a555a;
-    color: white;
-    font-size: 12px;
-    padding-top: 28px;
+.product-item-info .products-grid{
+    border: none;    
 }

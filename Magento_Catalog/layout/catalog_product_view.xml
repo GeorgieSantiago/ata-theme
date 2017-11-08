@@ -4,6 +4,8 @@
 <referenceBlock name="product.info.details" remove="true" />
 <referenceBlock name="frontlight.details.tab" before="footer-container" />
 <referenceBlock name="title" remove="true" />
+<!--<block class="Magento\Catalog\Block\Product\View" name="ata.info.review" template="Magento_Theme::review.phtml" />-->
 <move element="product.info.price" destination="product.info.form.content" />
+<!--<move element="ata.info.review" destination="col3" after="-" />-->
 </body>
 </page>
