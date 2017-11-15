@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-<body>
-<referenceBlock name="product.info.details" remove="true" />
-<referenceBlock name="frontlight.details.tab" before="footer-container" />
-<referenceBlock name="title" remove="true" />
-<!--<block class="Magento\Catalog\Block\Product\View" name="ata.info.review" template="Magento_Theme::review.phtml" />-->
-<move element="product.info.price" destination="product.info.form.content" />
-<!--<move element="ata.info.review" destination="col3" after="-" />-->
-</body>
+    <body>
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="frontlight.details.tab" before="footer-container" />
+        <referenceBlock name="title" remove="true" />
+        <!--<block class="Magento\Catalog\Block\Product\View" name="ata.info.review" template="Magento_Theme::review.phtml" />-->
+        <move element="product.info.price" destination="product.info.form.content" />
+        <!--<move element="ata.info.review" destination="col3" after="-" />-->
+        <move element="page.main.title" destination="col3" before="-" />
+        <block after="-" class="Magento\Catalog\Block\Product\View" name="product.info.review" template="module-catalog::view/review.phtml" />
+    </body>
 </page>

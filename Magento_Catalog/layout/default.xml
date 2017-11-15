@@ -21,7 +21,7 @@
     <move element="ata.product.row" destination="main.content" before="-" />
     <move element="product.info.main" destination="col1" />
     <move element="product.info.media.image" destination="col2" />
-<!--    <move element="page.main.title" destination="col3" before="-" />-->
+    <!--<move element="page.main.title" destination="col3" before="-" />-->
     <move element="product.info.addto" destination="col3" />
     <move element="details.tab.block" destination="col3" />
     <move element="product.info.review" destination="col3" after="-" />
@@ -29,6 +29,7 @@
     <move element="top.search" destination="ata.header.right" />
     <move element="ata.header.right" destination="header-menu-wrapper" />
     <move element="mini.cart" destination="ata.header.right"/>
+    <move element="product.info.upsell" destination="col2" />
 </body>
 </page>
 
